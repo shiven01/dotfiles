@@ -1,0 +1,26 @@
+# gitleaks configuration for the dotfiles repo
+# Run: gitleaks detect --source . --no-git
+# Docs: https://github.com/gitleaks/gitleaks
+
+title = "dotfiles gitleaks config"
+
+[extend]
+# Extend the default gitleaks ruleset
+useDefault = true
+
+[[rules]]
+id = "context7-api-key"
+description = "Context7 API key"
+regex = '''ctx7[a-zA-Z0-9_\-]{10,}'''
+tags = ["api-key", "context7"]
+
+  [rules.allowlist]
+  # The template placeholder is safe — it is not a real key
+  regexes = ['''ctx7sk-placeholder''']
+
+[allowlist]
+# Allow the template placeholder pattern throughout the repo
+regexes = [
+  '''\{\{CONTEXT7_API_KEY\}\}''',
+  '''\{\{REDACTED\}\}''',
+]

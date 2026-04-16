@@ -1,0 +1,10 @@
+# Generated Zed settings (contains real API key — never commit this)
+zed/settings.jsonc
+
+# Environment files
+.env
+.env.local
+
+# macOS
+.DS_Store
+**/.DS_Store
