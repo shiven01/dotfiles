@@ -62,6 +62,7 @@ echo ""
 # =============================================================================
 # === ZED CONFIG ===
 # Syncs ~/.config/zed/settings.json into the repo, redacting any secrets.
+# Also syncs ~/.config/zed/keymap.json directly (no secrets).
 #
 # The template file (settings.template.jsonc) is what gets committed.
 # The generated file (settings.jsonc) is in .gitignore and is what Zed reads.
@@ -77,6 +78,8 @@ echo "--- [zed] ---"
 
 ZED_LIVE="$HOME/.config/zed/settings.json"
 ZED_TEMPLATE="$SCRIPT_DIR/zed/settings.template.jsonc"
+ZED_KEYMAP_LIVE="$HOME/.config/zed/keymap.json"
+ZED_KEYMAP_OUTPUT="$SCRIPT_DIR/zed/keymap.json"
 
 if [[ ! -f "$ZED_LIVE" ]]; then
   echo "[zed] WARNING: Live Zed settings not found: $ZED_LIVE" >&2
@@ -150,6 +153,13 @@ PYEOF
     trap - EXIT
     rm -rf "$TMPDIR_WORK"
   fi
+fi
+
+if [[ -f "$ZED_KEYMAP_LIVE" ]]; then
+  cp "$ZED_KEYMAP_LIVE" "$ZED_KEYMAP_OUTPUT"
+  echo "[zed] Keymap written to: $ZED_KEYMAP_OUTPUT"
+else
+  echo "[zed] WARNING: Live Zed keymap not found: $ZED_KEYMAP_LIVE" >&2
 fi
 echo ""
 

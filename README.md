@@ -15,7 +15,8 @@ dotfiles/
 ├── zed/
 │   ├── settings.template.jsonc  # Zed settings with {{CONTEXT7_API_KEY}} placeholder (committed)
 │   ├── settings.jsonc           # Generated settings with real key (gitignored, what Zed reads)
-│   └── install.sh               # Generates settings.jsonc and creates symlink
+│   ├── keymap.json              # Zed key bindings (no secrets — committed directly)
+│   └── install.sh               # Generates settings.jsonc, symlinks both settings and keymap
 ├── zsh/
 │   ├── settings.zsh           # Zsh config / .zshrc contents
 │   └── install.sh             # Creates symlink at ~/.zshrc
@@ -72,6 +73,7 @@ This will:
 - Copy the live NetNewsWire OPML subscriptions into `rss/settings.opml`
 - Create a symlink: `~/.config/tmux/tmux.conf` -> `tmux/settings.conf`
 - Generate `zed/settings.jsonc` with your real API key substituted in, then symlink `~/.config/zed/settings.json` -> `zed/settings.jsonc`
+- Create a symlink: `~/.config/zed/keymap.json` -> `zed/keymap.json`
 - Create a symlink: `~/.zshrc` -> `zsh/settings.zsh`
 
 The installer is idempotent — safe to run multiple times.
@@ -106,7 +108,8 @@ If you run `generate-settings.sh`, gitleaks scans your live Zed settings and rep
 |--------|-------------|-----------|
 | NetNewsWire feeds | `~/Library/Containers/com.ranchero.NetNewsWire-Evergreen/.../Subscriptions.opml` | `rss/settings.opml` |
 | tmux | `~/.config/tmux/tmux.conf` | `tmux/settings.conf` |
-| Zed | `~/.config/zed/settings.json` | `zed/settings.jsonc` (generated, gitignored) |
+| Zed settings | `~/.config/zed/settings.json` | `zed/settings.jsonc` (generated, gitignored) |
+| Zed keymap | `~/.config/zed/keymap.json` | `zed/keymap.json` |
 | Zsh | `~/.zshrc` | `zsh/settings.zsh` |
 
 ## Adding New Configs
