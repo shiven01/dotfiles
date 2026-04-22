@@ -6,8 +6,10 @@
 </head>
 <body>
 	<outline text="Cloudflare" title="Cloudflare" description="" type="rss" version="RSS" htmlUrl="https://blog.cloudflare.com/" xmlUrl="https://blog.cloudflare.com/rss"/>
+	<outline text="Guarav Sarma" title="Guarav Sarma" description="" type="rss" version="RSS" htmlUrl="https://gauravsarma.com/" xmlUrl="https://www.gauravsarma.com/api/feed?format=rss"/>
 	<outline text="Joan Westenberg" title="Joan Westenberg" description="" type="rss" version="RSS" htmlUrl="https://www.joanwestenberg.com/" xmlUrl="https://www.joanwestenberg.com/rss/"/>
 	<outline text="Linear" title="Linear" description="" type="rss" version="RSS" htmlUrl="https://linear.app/now" xmlUrl="https://linear.app/rss/now.xml"/>
+	<outline text="Ngrok" title="Ngrok" description="" type="rss" version="RSS" htmlUrl="https://ngrok.com/blog" xmlUrl="https://ngrok.com/blog/rss.xml"/>
 	<outline text="Ramp" title="Ramp" description="" type="rss" version="RSS" htmlUrl="https://builders.ramp.com/" xmlUrl="https://builders.ramp.com/feed.xml"/>
 	<outline text="Reddit" title="Reddit" description="" type="rss" version="RSS" htmlUrl="https://www.reddit.com/r/Damnthatsinteresting/" xmlUrl="https://www.reddit.com/r/Damnthatsinteresting/.rss"/>
 	<outline text="Zed" title="Zed" description="" type="rss" version="RSS" htmlUrl="https://zed.dev/blog" xmlUrl="https://zed.dev/blog.rss"/>
