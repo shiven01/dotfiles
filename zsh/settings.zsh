@@ -6,6 +6,7 @@ alias ...='cd ../..'
 
 # Shortcuts
 alias ccview='cclogviewer -input' ## https://github.com/Brads3290/cclogviewer
+alias ccdsp='claude --dangerously-skip-permissions'
 ## ~/Zed → ~/Library/Application Support/Zed (symlink)
 
 # Git Configs:
