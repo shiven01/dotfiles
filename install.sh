@@ -29,6 +29,11 @@ echo "=== dotfiles installer ==="
 echo "DOTFILES_DIR: $DOTFILES_DIR"
 echo ""
 
+# === Bash / Terminal.app ===
+echo "--- [bash] ---"
+bash "$DOTFILES_DIR/bash/install.sh"
+echo ""
+
 # === RSS Feeds ===
 echo "--- [rss] ---"
 bash "$DOTFILES_DIR/rss/install.sh"
